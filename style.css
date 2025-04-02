@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  font-family: "DM Serif Display", serif;
+  font-family: "Karla", sans-serif;
+*/
+/* PRIMARY */
+/* NEUTRAL */
+.mobile-nav, header {
+  padding: 5vh 10vw;
+}
+
+html {
+  font-size: 16px;
+}
+
+a:-moz-any-link {
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+}
+
+a,
+a:any-link {
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 25px;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsl(270, 9%, 17%);
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url(./public/bg-pattern-mobile-nav.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100vw 40vh;
+}
+.mobile-nav a {
+  color: white;
+  font-weight: 700;
+}
+.mobile-nav a:hover, .mobile-nav a:active {
+  color: rgba(255, 255, 255, 0.74);
+}
+.mobile-nav button {
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0 20px;
+  letter-spacing: 0.1rem;
+  font-weight: bolder;
+  height: 35px;
+  border: 2px solid white;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: white;
+}
+.mobile-nav button:hover, .mobile-nav button:focus {
+  background-color: white;
+  color: hsl(270, 9%, 17%);
+  outline: none;
+}
+
+.close {
+  display: none;
+}
+
+.burger {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+  .burger {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+  .desktop-nav a {
+    color: hsl(273, 4%, 51%);
+    font-weight: 700;
+  }
+  .desktop-nav a:hover, .desktop-nav a:active {
+    color: hsl(270, 9%, 17%);
+  }
+  .desktop-nav button {
+    align-items: center;
+    font-size: 0.7rem;
+    padding: 0 20px;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    height: 35px;
+    border: 2px solid hsl(270, 9%, 17%);
+    background-color: transparent;
+    text-transform: uppercase;
+  }
+  .desktop-nav button:hover, .desktop-nav button:focus {
+    background-color: hsl(256, 26%, 20%);
+    color: white;
+  }
+}/*# sourceMappingURL=style.css.map */
