@@ -19,6 +19,20 @@ html {
   font-size: 16px;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  line-height: 3.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.3rem;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+
 a:-moz-any-link {
   text-decoration: none;
   font-family: "Karla", sans-serif;
@@ -30,10 +44,37 @@ a:any-link {
   font-family: "Karla", sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+button {
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 0 20px;
+  letter-spacing: 0.1rem;
+  font-weight: bolder;
+  height: 35px;
+  border: 2px solid white;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: white;
+}
+button:hover, button:focus {
+  background-color: white;
+  color: hsl(270, 9%, 17%);
+  outline: none;
+  cursor: pointer;
+}
+
+main {
   position: relative;
 }
 
@@ -65,25 +106,8 @@ header {
 .mobile-nav a:hover, .mobile-nav a:active {
   color: rgba(255, 255, 255, 0.74);
 }
-.mobile-nav button {
-  align-items: center;
-  font-size: 0.9rem;
-  padding: 0 20px;
-  letter-spacing: 0.1rem;
-  font-weight: bolder;
-  height: 35px;
-  border: 2px solid white;
-  background-color: transparent;
-  text-transform: uppercase;
-  color: white;
-}
-.mobile-nav button:hover, .mobile-nav button:focus {
-  background-color: white;
-  color: hsl(270, 9%, 17%);
-  outline: none;
-}
 
-.close {
+.close, .desktop-img {
   display: none;
 }
 
@@ -93,7 +117,92 @@ header {
   border: none;
 }
 
+.img img {
+  width: 100%;
+  height: 100%;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.humanize-section {
+  margin-top: -5px;
+  color: white;
+  background-color: hsl(256, 26%, 20%);
+  text-align: center;
+  padding: 20vh 10vw;
+  line-height: 2rem;
+  background-image: url(./public/bg-pattern-intro-left-mobile.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.humanize-section p {
+  margin-bottom: 30px;
+}
+
+.intro {
+  position: absolute;
+  top: 85%;
+  right: 0;
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  header {
+    padding: 5vh 5vw;
+  }
+  .desktop-img {
+    display: inline;
+  }
+  .mobile-img {
+    display: none;
+  }
+  .img {
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    top: 20vh;
+    right: 0;
+  }
+  .humanize-section {
+    background-image: unset;
+    text-align: left;
+    padding: 20vh 7vw;
+  }
+  .humanize-section div {
+    width: 60%;
+  }
+  .intro {
+    right: unset;
+    left: 0;
+    top: 85%;
+  }
+}
 @media screen and (min-width: 768px) {
+  .intro {
+    right: unset;
+    left: 0;
+    top: 80%;
+  }
+  .humanize-section {
+    background-image: unset;
+    text-align: left;
+  }
+  .humanize-section div {
+    width: 50%;
+  }
+  .img {
+    width: 40%;
+    position: absolute;
+    top: 15%;
+    right: 7%;
+  }
+  .desktop-img {
+    display: inline;
+  }
+  .mobile-img {
+    display: none;
+  }
   .mobile-nav {
     display: none;
   }
@@ -124,6 +233,7 @@ header {
     border: 2px solid hsl(270, 9%, 17%);
     background-color: transparent;
     text-transform: uppercase;
+    color: hsl(270, 9%, 17%);
   }
   .desktop-nav button:hover, .desktop-nav button:focus {
     background-color: hsl(256, 26%, 20%);
