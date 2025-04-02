@@ -11,7 +11,7 @@
 */
 /* PRIMARY */
 /* NEUTRAL */
-.mobile-nav, header {
+.find-out, .mobile-nav, header {
   padding: 5vh 10vw;
 }
 
@@ -19,12 +19,15 @@ html {
   font-size: 16px;
 }
 
-h1 {
-  font-size: 2.5rem;
+h1, h2, h3 {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
-  line-height: 3.5rem;
   margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
 }
 
 p {
@@ -143,11 +146,38 @@ main {
 
 .intro {
   position: absolute;
-  top: 85%;
+  top: 56%;
   right: 0;
 }
 
+.find-out {
+  min-height: 150px;
+  background-color: hsl(256, 26%, 20%);
+  color: white;
+  text-align: center;
+  margin: 10vh 10vw;
+  background-image: url(./public/bg-pattern-how-we-work-mobile.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
 @media screen and (min-width: 600px) and (max-width: 768px) {
+  .find-out {
+    margin: 10vh 5vw;
+    background-image: url(./public/bg-pattern-how-we-work-desktop.svg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 20px;
+  }
+  .find-out h2 {
+    font-size: 2rem;
+    margin: unset;
+  }
+  .find-out button {
+    width: 200px;
+  }
   header {
     padding: 5vh 5vw;
   }
@@ -159,13 +189,14 @@ main {
   }
   .img {
     width: 40%;
-    height: 60%;
     position: absolute;
     top: 20vh;
     right: 0;
   }
   .humanize-section {
-    background-image: unset;
+    background-image: url(./public/bg-pattern-intro-right-desktop.svg);
+    background-size: 50vw;
+    background-position: top right;
     text-align: left;
     padding: 20vh 7vw;
   }
@@ -175,17 +206,34 @@ main {
   .intro {
     right: unset;
     left: 0;
-    top: 85%;
+    top: 46%;
   }
 }
 @media screen and (min-width: 768px) {
+  .find-out {
+    margin: 10vh 5vw;
+    background-image: url(./public/bg-pattern-how-we-work-desktop.svg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 20px;
+  }
+  .find-out h2 {
+    font-size: 3.5rem;
+    margin: unset;
+  }
+  .find-out button {
+    width: 200px;
+  }
   .intro {
     right: unset;
     left: 0;
-    top: 80%;
+    top: 43%;
   }
   .humanize-section {
-    background-image: unset;
+    background-image: url(./public/bg-pattern-intro-right-desktop.svg);
+    background-position: right;
     text-align: left;
   }
   .humanize-section div {
@@ -194,7 +242,7 @@ main {
   .img {
     width: 40%;
     position: absolute;
-    top: 15%;
+    top: 5%;
     right: 7%;
   }
   .desktop-img {
